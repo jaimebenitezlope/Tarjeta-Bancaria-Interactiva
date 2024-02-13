@@ -2,16 +2,104 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<link rel="icon" type="image/svg+xml" href="/assets/images/vite.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="css/base/normalize.css" />
-		<link rel="stylesheet" href="css/base/base.css" />
+		<title>Document</title>
 		<link rel="stylesheet" href="css/styles.css" />
-		<title>Vite App</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
+
 	<body>
-		<h1>WEB WITH VITE</h1>
-		<!-- <img src="./assets/images/cute-cat.webp" alt="" /> -->
+		<!-- CARDS    -->
+
+		<main class="main">
+			<div class="card-container">
+				<div class="card card-front">
+					<img class="logo" src="./assets/images/card-logo.svg" alt="" />
+					<span id="card-number" class="span-card-1">0000 0000 0000 0000</span>
+					<div class="span-card-2">
+						<span id="card-name" class="span-card-2-1">Your name</span>
+						<span id="card-year" class="span-card-2-2">00</span>
+					</div>
+
+					<span id="card-month" class="span-card-2-3">00</span>
+				</div>
+				<div class="card card-back">
+					<span id="card-cvc" class="card-secretnumber">000</span>
+				</div>
+			</div>
+		</main>
+
+		<!-- FORMULARIO -->
+
+		<div class="form-div">
+			<form id="form" class="cardForm" method="get">
+				<label for="name" class="label-name"> CARDHOLDER NAME </label>
+				<input
+					id="name"
+					class="card-input"
+					type="text"
+					placeholder="e.g e.g. Jane Appleseed"
+					name="name"
+					maxlength="16"
+				/>
+
+				<label for="number" class="label-name">
+					CARD NUMBER
+					<input
+						id="number"
+						type="text"
+						name="number"
+						class="card-input"
+						type="text"
+						placeholder="e.g. 1234 5678 9123 0000"
+						maxlength="16"
+					/>
+				</label>
+
+				<label class="label-date">
+					EXP. DATE (MM/YY)
+
+					<div class="label-date-div">
+						<div class="label-date-1">
+							<input
+								id="month"
+								class="card-input"
+								type="text"
+								placeholder="MM"
+								name="month"
+								maxlength="2"
+							/>
+							<input
+								id="year"
+								class="card-input"
+								type="text"
+								placeholder="YY"
+								name="year"
+								maxlength="2"
+							/>
+						</div>
+
+						<div class="label-date-2">
+							<input
+								type="text"
+								name="cvc"
+								id="cvc"
+								class="card-input"
+								placeholder="123"
+								maxlength="3"
+							/>
+						</div>
+					</div>
+				</label>
+				<button class="button">Confirm</button>
+			</form>
+		</div>
+
 		<script type="module" src="./js/index.js"></script>
 	</body>
 </html>
